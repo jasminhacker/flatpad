@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>FlatPad</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+		<script src="{% static 'script.js' %}"></script>
+		<script>
+			let PAD_VERSION = {{ pad_version }};
+		</script>
+	</head>
+	<body>
+		<div id="presence">
+			{% for name in names %}
+			<div class="obround">
+				<span class="presence-name">{{ name }}</span>
+				<div class="presence-indicator circle spinner"></div>
+			</div>
+			{% endfor %}
+			<div class="obround" style="display: none">
+				<span class="presence-name">+0</span>
+				<div class="presence-indicator circle"></div>
+			</div>
+			<span id="update-presence">⟳</span>
+		</div>
+		<textarea id="pad" autofocus autocomplete="off">{{pad_content}}</textarea>
+		<div id="pad-footer">
+			<div id="pad-status" class="obround">
+				<div id="pad-status-indicator" class="circle yes"></div>
+				<span id="pad-status-text">Synced</span>
+			</div>
+			<button class="btn" id="submit-pad">Submit</button>
+		</div>
+	</body>
+</html>

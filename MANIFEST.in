@@ -1,0 +1,6 @@
+include AUTHORS
+include LICENSE
+include MANIFEST.in
+graft flatpad
+global-exclude __pycache__
+global-exclude *.py[co]

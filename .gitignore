@@ -1,0 +1,3 @@
+flatpad/db.sqlite3
+flatpad/secret_key
+*.pyc

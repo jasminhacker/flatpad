@@ -1,0 +1,108 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	display: flex;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	flex-direction: column;
+	background-color: #272c30;
+	font-size: large;
+}
+
+#presence {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.obround {
+	background-color: #f8f9fa;
+	color: #333333;
+	border-radius: 1em;
+	display: flex;
+	align-items: center;
+	margin: 0.2em;
+}
+.obround > span {
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+.presence-name {
+	padding-left: 0.5em;
+	margin-right: -0.2em;
+}
+.circle {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 1em;
+	height: 1em;
+	width: 1em;
+	margin-left: 0.4em;
+	margin-right: 0.4em;
+	border-radius: 50%;
+}
+.no {
+	border: 2px solid red;
+	background-color: red;
+}
+.no:after {
+	content: "✗";
+}
+.yes {
+	border: 2px solid green;
+	background-color: green;
+}
+.yes:after {
+	content: "✓";
+}
+.warn {
+	border: 2px solid yellow;
+	background-color: yellow;
+}
+.warn:after {
+	content: "!";
+}
+#update-presence {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 1em;
+	font-size: xx-large;
+	color: #f8f9fa;
+	cursor: pointer;
+	user-select: none;
+}
+
+#pad {
+	resize: none;
+	flex-grow: 1;
+	padding: 8px;
+	color: #212529;
+	border-radius: 0.25rem;
+	border: none;
+	font-family: sans-serif;
+}
+#pad-footer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+#pad-footer > * {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+#pad-status-text {
+	padding-right: 0.5em;
+	margin-left: -0.2em;
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+.spinner {
+	border: 2px solid #ccc;
+	border-top-color: #000;
+	animation: spinner .6s linear infinite;
+}
